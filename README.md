@@ -68,7 +68,10 @@ MySQL Workbench is a graphical user interface for managing MySQL databases.
      ```sql
      CREATE DATABASE ruleengine;
      ```
-
+## Clone Repository
+```bash
+    git clone https://github.com/ishanraising/Rule-Engine-App-Backend-
+```
 
 
 ## Running the Application

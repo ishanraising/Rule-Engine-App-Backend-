@@ -25,7 +25,10 @@ public class RuleServiceImpl implements RuleService {
         Stack<Node> nodeStack = new Stack<>();
         Stack<String> operatorStack = new Stack<>();
 
-        String[] tokens = ruleString.split(" ");
+        String[] tokens = ruleString.split("(?<=\\sAND\\s)|(?=\\sAND\\s)|(?<=\\sOR\\s)|(?=\\sOR\\s)|(?<=\\()|(?=\\()|(?<=\\))|(?=\\))");
+        for(int i=0 ; i<tokens.length;i++){
+            tokens[i]=tokens[i].trim();
+        }
         for (String token : tokens) {
             if (isOperator(token)) {
                 // Handle operator

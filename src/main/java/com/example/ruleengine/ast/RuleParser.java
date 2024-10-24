@@ -17,7 +17,9 @@ public class RuleParser {
 
         // Split the rule into tokens (operands and operators)
         String[] tokens = rule.split("(?<=\\sAND\\s)|(?=\\sAND\\s)|(?<=\\sOR\\s)|(?=\\sOR\\s)|(?<=\\()|(?=\\()|(?<=\\))|(?=\\))");
-
+        for(int i=0 ; i<tokens.length;i++){
+            tokens[i]=tokens[i].trim();
+        }
         for (String token : tokens) {
             if (token.isEmpty()) {
                 continue;
